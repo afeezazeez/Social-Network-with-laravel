@@ -12,12 +12,52 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+	Route::group(['middleware' => 'web'], function(){
+		Route::get('/', function () {
+    		return view('welcome');
+		});
+
+		Route::post('/signup',[
+			'uses' => 'UserController@postsignUp',
+			'as' => 'signup'
+		]);
+
+		
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+

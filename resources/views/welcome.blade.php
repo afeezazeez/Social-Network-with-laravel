@@ -8,7 +8,8 @@
 <div class="row">
 	<div class="col-md-6">
 		<h3>Sign Up</h3>
-		<form>
+		<form method="post" action="{{route('signup')}}">
+			{{csrf_field() }}
 		<div class="form-group">
 			<label for="email">Your Email</label>
 			<input type="text" name="email" id="email" class="form-control">
@@ -22,6 +23,7 @@
 			<input type="password" name="password" id="password" class="form-control">
 		</div>
 		<button type="submit" class="btn btn-primary">Submit </button>
+
 		</form>	
 	</div>
 
