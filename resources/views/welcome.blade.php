@@ -29,14 +29,11 @@
 
 	<div class="col-md-6">
 		<h3>Sign In</h3>
-		<form>
+		<form method="post" action="{{route('signin')}}">
+			{{csrf_field() }}
 		<div class="form-group">
 			<label for="email">Your Email</label>
 			<input type="text" name="email" id="email" class="form-control">
-		</div>
-		<div class="form-group">
-			<label for="email">Your First Name</label>
-			<input type="text" name="first_name" id="first_name" class="form-control">
 		</div>
 		<div class="form-group">
 			<label for="email">Your Password</label>
