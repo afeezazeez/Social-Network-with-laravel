@@ -11,12 +11,12 @@
 |
 */
 
-
+	
 
 	Route::group(['middleware' => 'web'], function(){
 		Route::get('/', function () {
     		return view('welcome');
-		});
+		})->name('welcome');
 
 		Route::post('/signup',[
 			'uses' => 'UserController@postsignUp',
@@ -34,17 +34,16 @@
 		]);
 
 
+		
+	});
+
+
+	Route::group(['middleware' => 'auth'], function(){
 		Route::get('/dashboard',[
 			'uses' => 'UserController@getDashboard',
 			'as' => 'dashboard'
 		]);
-
-
-
-
-		
 	});
-
 
 
 
