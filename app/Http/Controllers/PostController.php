@@ -8,6 +8,11 @@ use App\Post;
 
 class PostController extends Controller
 {
+
+	public function getDashboard(){
+	$post=Post::all();
+		return view('dashboard', ['posts'=> $post]);
+	}
     public function postCreatePost(Request $request){
     	//validation
 
@@ -25,4 +30,6 @@ class PostController extends Controller
     	}
     	return redirect()->route('dashboard')->with(['message' => $message]);
     }
+
+
 }

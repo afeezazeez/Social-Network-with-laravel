@@ -36,38 +36,20 @@
 <section class="row posts">
 	<div class="col-md-6 col-md-offset-3">
 		<header><h3>What other people say...</h3></header>
-		<article class="post">
-			<p>Lorem ipsum is a text generating site...Lorem ipsum is a text generating site...
-			Lorem ipsum is a text generating site...Lorem ipsum is a text generating site...
-			Lorem ipsum is a text generating site...Lorem ipsum 	is a text generating site...
-			Lorem ipsum is a text generating site...Lorem ipsum is a text generating site...<br></p>
+		@foreach($posts as $post)
+			<article class="post">
+			<p>{{ $post->body }}</p>
 			<div class="info">
-				Posted by Locci on 12 Feb 2019
-			</div>
+				Posted by {{ $post->user->first_name }} on {{ $post->created_at }}			</div>
 			<div class="interaction">
 				<a href="#">Like</a> |
 				<a href="#">Dislike</a> |
 				<a href="#">Edit</a> |
 				<a href="#">Delete</a> |
 			</div>
-		</article><br>
-
-		<article class="post">
-			<p>Lorem ipsum is a text generating site...Lorem ipsum is a text generating site...
-			Lorem ipsum is a text generating site...Lorem ipsum is a text generating site...
-			Lorem ipsum is a text generating site...Lorem ipsum 	is a text generating site...
-			Lorem ipsum is a text generating site...Lorem ipsum is a text generating site...<br></p>
-			<div class="info">
-				Posted by Locci on 12 Feb 2019
-			</div>
-			<div class="interaction">
-				<a href="#">Like</a> | 
-				<a href="#">Dislike</a> |
-				<a href="#">Edit</a> |
-				<a href="#">Delete</a> |
-			</div>
 		</article>
-
+		@endforeach
+		
 	</div>
 </section>
 
