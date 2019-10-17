@@ -43,6 +43,11 @@
 			'uses' => 'UserController@getDashboard',
 			'as' => 'dashboard'
 		]);
+
+		Route::post('/createpost',[
+			'uses' => 'PostController@postCreatePost',
+			'as' => 'post.create'
+		]);
 	});
 
 

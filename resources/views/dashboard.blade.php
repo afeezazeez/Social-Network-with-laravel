@@ -5,7 +5,8 @@
 <section class="row new-post">
 	<div class="col-md-6 col-md-offset-3">
 		<header><h3>What do you have to say?</h3></header>
-			<form action="" method="post">
+			<form action="{{ route('post.create') }}" method="post">
+				{{csrf_field() }}
 				<div class="form-group">
 					<textarea class="form-control" name="new-post" id="new-post" rows="5"></textarea>
 				</div>
