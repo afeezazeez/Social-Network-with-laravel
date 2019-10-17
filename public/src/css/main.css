@@ -17,3 +17,27 @@
 	color: #aaa;
 	font-style: italic;
 }
+
+.error{
+	border: 1px solid red;
+	background-color: #f9b5af;
+	color: red;
+	margin: 20px;
+
+}
+.error,.success{
+	text-align: center;
+}
+.error li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.success{
+	border: 1px solid green;
+	background-color: #d1f9da;
+	color: green;
+	margin: 20px;
+}

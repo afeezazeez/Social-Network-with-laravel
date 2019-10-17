@@ -11,11 +11,18 @@ class PostController extends Controller
     public function postCreatePost(Request $request){
     	//validation
 
-    	$post = new Post;
-    	$post->body=$request['new-post'];
+    	$this->validate($request,[
+    		'post'=> 'required|max:1000'
+    		
+    	]);
 
+    	$post = new Post;
+    	$post->body=$request['post'];
+    	$message="There was an error!";
     	// post belongs to currently authenticated user
-    	$request->user()->posts()->save($post);
-    	return redirect()->route('dashboard');
+    	if($request->user()->posts()->save($post)){
+    		$message="Post successfully created";
+    	}
+    	return redirect()->route('dashboard')->with(['message' => $message]);
     }
 }

@@ -4,14 +4,30 @@
 
 <section class="row new-post">
 	<div class="col-md-6 col-md-offset-3">
+		@if(Session::has('message'))
+			<div class="error text-success success">
+				{{ Session::get('message') }}
+			</div>
+			@endif
+			@if($errors->has('post'))
+				<div class="error text-danger error">
+					<li>{{ $errors->first('post') }}</li>
+				</div>
+			@endif
 		<header><h3>What do you have to say?</h3></header>
+
 			<form action="{{ route('post.create') }}" method="post">
 				{{csrf_field() }}
 				<div class="form-group">
-					<textarea class="form-control" name="new-post" id="new-post" rows="5"></textarea>
+					<textarea class="form-control" name="post" id="new-post" rows="5" placeholder="Your Post"></textarea>
 				</div>
 				<button type="submit" class="btn btn-primary">Create Post</button>
 			</form>
+
+
+			
+
+			
 	
 	</div>
 	
