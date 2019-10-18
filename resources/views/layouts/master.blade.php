@@ -2,14 +2,20 @@
 <html>
 <head>
 	<title>@yield('title')</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{ URL::to('src/css/main.css') }}">
 	<link rel="stylesheet" href="{{ URL::to('src/css/bootstrap.min.css') }}">
+
+
 </head>
 <body>
 @include("includes.header")
 <div class="container">
 @yield('content')
 </div>
+
+
+<script src="{{ URL::to('src/js/jquery-1.11.3.min.js') }}"></script>
+<script src="{{ URL::to('src/js/app.js') }}"></script>
+<script src="{{ URL::to('src/js/bootstrap.min.js') }}"></script>
 </body> 
 </html>
