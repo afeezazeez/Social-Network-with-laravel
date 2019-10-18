@@ -31,5 +31,19 @@ class PostController extends Controller
     	return redirect()->route('dashboard')->with(['message' => $message]);
     }
 
+    public function getDeletePost($post_id){
+
+    	$post = Post::where('id',$post_id)->first();
+    	
+    	$message="There was an error";
+
+    	if ($post->delete()) {
+    		$message="Post successfully deleted";
+
+    	}
+    	return redirect()->route('dashboard')->with(['message' => $message]);
+
+    }
+
 
 }
