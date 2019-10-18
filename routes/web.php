@@ -33,6 +33,12 @@
 			'as' => 'signin'
 		]);
 
+		Route::get('/logout',[
+			'uses' => 'UserController@getLogout',
+			'as' => 'logout'
+		]);
+
+
 
 		
 	});

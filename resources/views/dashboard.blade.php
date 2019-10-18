@@ -43,9 +43,12 @@
 				Posted by {{ $post->user->first_name }} on {{ $post->created_at }}			</div>
 			<div class="interaction">
 				<a href="#">Like</a> |
-				<a href="#">Dislike</a> |
+				<a href="#">Dislike</a> 
+				@if(Auth::user()==$post->user)
+				|
 				<a href="#">Edit</a> |
-				<a href="{{ route('post.delete',['post_id'=>$post->id]) }}">Delete</a> |
+				<a href="{{ route('post.delete',['post_id'=>$post->id]) }}">Delete</a> 
+				@endif
 			</div>
 		</article>
 		@endforeach
