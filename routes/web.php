@@ -61,6 +61,16 @@
 		]);
 
 
+		Route::get('edit','PostController@getEdit')->name('edit');
+
+
+		// Route::post('/edit', function(\Illuminate\Http\Request $request){
+
+		// 	return $request;
+
+		// return response()->json(['message' => $request['body']]);
+
+		// })->name('edit');
 	});
 
 

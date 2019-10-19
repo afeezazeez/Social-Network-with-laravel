@@ -48,5 +48,13 @@ class PostController extends Controller
 
     }
 
+    public function getEdit(Request $request){
+		
+		$post = Post::find($request['postId']);
+		$post->body=$request['body'];
+		$post->save();
+		
+		
+    }
 
 }

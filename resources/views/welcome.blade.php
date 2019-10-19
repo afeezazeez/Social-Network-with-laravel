@@ -48,6 +48,11 @@
 
 	<div class="col-md-6">
 		<h3>Sign In</h3>
+		@if(Session::has('message'))
+			<div class="error text-danger danger">
+				{{ Session::get('message') }}
+			</div>
+			@endif
 		<form method="post" action="{{route('signin')}}">
 			{{csrf_field() }}
 		<div class="form-group ">
@@ -70,6 +75,9 @@
 				{{ $errors->first('password') }}
 			</div>
 		@endif<br>
+
+	
+		
 		<button type="submit" class="btn btn-primary">Submit </button>
 		</form>	
 	</div>
