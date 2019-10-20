@@ -50,9 +50,20 @@ class PostController extends Controller
 
     public function getEdit(Request $request){
 		
-		$post = Post::find($request['postId']);
+		$this->validate($request,[
+    		'body'=> 'required'
+    		
+		]);
+		$post=Post::find($request['postId']);
+		if (Auth::user()!=$post->user) {
+    		return redirect()->back();
+    	}
+    	
+		
+		
 		$post->body=$request['body'];
-		$post->save();
+		$post->update();
+		return response()->json(['new_body'=>$post->body],200);
 		
 		
     }
