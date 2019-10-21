@@ -18,7 +18,7 @@ $('.post').find('.interaction').find('#edit').on('click', function(event){
  	var x=$('#post-body').val()
 	$.ajax({
  		method:'get',
- 		url:url,
+ 		url:urlEdit,
  		data:{
  			body:x,
  			postId:postId
@@ -30,5 +30,56 @@ $('.post').find('.interaction').find('#edit').on('click', function(event){
 
  	})
  });
+
+
+$('.like').on('click', function(event){
+	event.preventDefault()
+	postId= event.target.parentNode.parentNode.dataset['postid'];
+  
+	var isLike= event.target.previousElementSibling== null
+	$.ajax({
+		method:'get',
+		url:urlLike,
+		data:{
+			isLike:isLike,
+			postId:postId
+		}
+	})
+	.done(function(msg){
+
+		//change the page
+	   $(postBodyElement).text(msg['new_body']);
+	   $('#edit-modal').modal('hide');
+
+	})
+}) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
