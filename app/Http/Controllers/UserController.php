@@ -45,5 +45,34 @@ class UserController extends Controller
     public function getLogout(){
         Auth::logout();
         return redirect()->route('welcome');
-    }
+	}
+	
+	public function getAccount(){
+		return view('account',['user'=> Auth::user()]);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

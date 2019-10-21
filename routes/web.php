@@ -62,15 +62,19 @@
 
 
 		Route::get('edit','PostController@getEdit')->name('edit');
+		
+		Route::get('/account',[
+			'uses' => 'UserController@getAccount',
+			'as' => 'account'
+		]);
 
 
-		// Route::post('/edit', function(\Illuminate\Http\Request $request){
+		Route::post('/updateaccount',[
+			'uses' => 'UserController@postSaveAccount',
+			'as' => 'account.save'
+		]);
 
-		// 	return $request;
 
-		// return response()->json(['message' => $request['body']]);
-
-		// })->name('edit');
 	});
 
 

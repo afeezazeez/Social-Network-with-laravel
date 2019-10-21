@@ -1,0 +1,101 @@
+[33mcommit da7ec487f04cc35fa1c709963344d67a7b70798c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sun Oct 20 14:23:16 2019 +0100
+
+    finalising edit post
+
+[33mcommit e8a076649d8e999ab81aeb2df2c661a7b5baa424[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sat Oct 19 17:52:21 2019 +0100
+
+    editing post using ajax jquery
+
+[33mcommit e789815cc34cd036891745039f71d3b6f53c33f9[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Fri Oct 18 23:51:52 2019 +0100
+
+    edit post using ajax jquery
+
+[33mcommit 772635601225e117cef221d29082b155bd90aa1a[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Fri Oct 18 23:20:07 2019 +0100
+
+    user logout and fixing post deletion
+
+[33mcommit ef9e9e903f8f0915ec27d04cf4dcdb66a7062b04[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Fri Oct 18 17:41:04 2019 +0100
+
+    deleting posts
+
+[33mcommit 030cee5ce8219082f703ea553eb8e2333495299a[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Thu Oct 17 16:16:59 2019 +0100
+
+    outputting posts on user dashboard
+
+[33mcommit e4b5b62b37038e749b3b74635f3968080ab37573[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Thu Oct 17 15:57:20 2019 +0100
+
+    post validation and outputting errors
+
+[33mcommit c07363f0a59cfad90c32274418893c22fc1892f2[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Thu Oct 17 15:28:42 2019 +0100
+
+    creating post model and saving posts into database
+
+[33mcommit 5dd4b7aefa9b26905897bdda9a23ee61ac507e74[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Thu Oct 17 15:04:42 2019 +0100
+
+    styling the dashboard
+
+[33mcommit f841db1e44660bb033de3a7c278adf9c504e7781[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Tue Oct 15 14:57:05 2019 +0100
+
+    route protection using middleware auth
+
+[33mcommit d72ff61d6fdc98e8e279ede4c58630099da269a5[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sat Oct 12 17:46:45 2019 +0100
+
+    input validation
+
+[33mcommit 37677dedc9a77372050da7a6b3d5ad04357de608[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sat Oct 12 16:56:10 2019 +0100
+
+    logging in users
+
+[33mcommit 9b885e46b090af19a8c2f97acdb45f7c6ea55db7[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sat Oct 12 12:57:25 2019 +0100
+
+    created user model, sign up/sign in controller and also implemented user registration
+
+[33mcommit 3197ed0f02b2a393d6d134bc42a9a47e56a9495c[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sat Oct 12 11:55:29 2019 +0100
+
+    creating sign up and sign in form
+
+[33mcommit fcb8718870b480c78bcf9158d021e1a65800ef9e[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Sat Oct 12 10:08:30 2019 +0100
+
+    creating master layout
+
+[33mcommit 291ca54ac8aba24d167517fe3c65a4b76cfc404b[m
+Author: azeezafeez <chillingloccin1@gmail.com>
+Date:   Wed Oct 9 15:43:13 2019 +0100
+
+    fresh laravel project
+
+[33mcommit 98bd57f59442c2aa5047ed6503caae6c95fc08d3[m
+Author: Azeez Afeez Olaniyi <47336568+azeezafeez@users.noreply.github.com>
+Date:   Wed Oct 9 15:22:14 2019 +0100
+
+    Initial commit
