@@ -26,7 +26,10 @@
 	@if(Storage::disk('local')->has($user->first_name.'-'.$user->id.'jpg'))
 		<section class="row new-post">
 			<div class="col-md-6 col-md-offset-3">
-				<img src="{{ route.image, ['filename'=> $user->first_name.'-'.$user->id.'jpg'] }}">
+				
+                <img src="{{ route('account.image',['filename'=> $user->first_name.'-'.$user->id.'jpg']) }} " width='250' height='250'>
+                
+                
 			</div>
 		
 		</section>
