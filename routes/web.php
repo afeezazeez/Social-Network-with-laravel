@@ -15,8 +15,13 @@
 
 	Route::group(['middleware' => 'web'], function(){
 		Route::get('/', function () {
-    		return view('welcome');
-		})->name('welcome');
+    		return view('homepage');
+		})->name('homepage');
+
+		Route::get('/index', function () {
+    		return view('dashboard');
+		})->name('dashboard');
+
 
 		Route::post('/signup',[
 			'uses' => 'UserController@postsignUp',
@@ -45,10 +50,13 @@
 
 
 	Route::group(['middleware' => 'auth'], function(){
-		Route::get('/dashboard',[
+		Route::get('/index',[
 			'uses' => 'PostController@getDashboard',
-			'as' => 'dashboard'
+			'as' => 'index'
 		]);
+
+
+
 
 		Route::post('/createpost',[
 			'uses' => 'PostController@postCreatePost',
@@ -78,6 +86,10 @@
 			'uses' => 'UserController@getUserImage',
 			'as' => 'account.image'
 		]);
+
+		Route::get('like','PostController@getLikePost')->name('like');
+		
+
 
 
 	});

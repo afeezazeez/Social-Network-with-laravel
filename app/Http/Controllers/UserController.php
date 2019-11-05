@@ -40,7 +40,7 @@ class UserController extends Controller
     		'password' => 'required'
     	]);
     	if(Auth::attempt(['email'=> $request['email'], 'password' => $request['password']])){
-    			return redirect()->route('dashboard');
+    			return redirect()->route('index');
 		}
 		$message="Incorrect username or password";
     	return redirect()->back()->with(['message' => $message]);
@@ -48,7 +48,7 @@ class UserController extends Controller
 
     public function getLogout(){
         Auth::logout();
-        return redirect()->route('welcome');
+        return redirect()->route('homepage');
 	}
 	
 	public function getAccount(){
